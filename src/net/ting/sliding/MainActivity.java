@@ -1,36 +1,82 @@
 package net.ting.sliding;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import android.support.v4.app.Fragment;
+import android.view.MenuItem;
+import android.view.Window;
 
-public class MainActivity extends Activity implements OnClickListener{
-	private SlideMenu slideMenu;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
+public class MainActivity extends SlidingFragmentActivity {
+
+	private Fragment mContent;
+
+	@SuppressLint("NewApi")
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		slideMenu = (SlideMenu) findViewById(R.id.slide_menu);
-		ImageView menuImg = (ImageView) findViewById(R.id.title_bar_menu_btn);
-		menuImg.setOnClickListener(this);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		initSlidingMenu(savedInstanceState);
 	}
 
+	/**
+	 * 初始化滑动菜单
+	 */
+	private void initSlidingMenu(Bundle savedInstanceState) {
+		// 如果保存的状态不为空则得到ColorFragment，否则实例化ColorFragment
+		if (savedInstanceState != null)
+			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");
+		if (mContent == null)
+			mContent = new ColorFragment(R.color.red);
+
+		// 设置主视图界面
+		setContentView(R.layout.content_frame);
+		getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, mContent).commit();
+
+		// 设置滑动菜单视图界面
+		setBehindContentView(R.layout.menu_frame);
+		getSupportFragmentManager().beginTransaction().replace(R.id.menu_frame, new SlideMenu()).commit();
+
+		// 设置滑动菜单的属性值
+		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		getSlidingMenu().setShadowWidthRes(R.dimen.shadow_width);
+		getSlidingMenu().setShadowDrawable(R.drawable.shadow);
+		getSlidingMenu().setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		getSlidingMenu().setFadeDegree(0.35f);
+		getSlidingMenu().setBehindWidth(getResources().getInteger(R.integer.behind_width));
+
+	}
+
+	/**
+	 * 切换Fragment，也是切换视图的内容
+	 */
+	public void switchContent(Fragment fragment) {
+		mContent = fragment;
+		getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
+		getSlidingMenu().showContent();
+	}
+
+	/**
+	 * 菜单按钮点击事件，通过点击ActionBar的Home图标按钮来打开滑动菜单
+	 */
 	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.title_bar_menu_btn:
-			if (slideMenu.isMainScreenShowing()) {
-				slideMenu.openMenu();
-			} else {
-				slideMenu.closeMenu();
-			}
-			break;
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			toggle();
+			return true;
 		}
-		
+		return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * 保存Fragment的状态
+	 */
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
+	}
 }

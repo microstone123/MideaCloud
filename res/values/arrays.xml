@@ -1,0 +1,23 @@
+<resources>
+
+    <string-array name="slidemenulist">
+        <item>冰箱控制 </item>
+        <item>产品推荐</item>
+        <item>交互专区</item>
+        <item>信息中心</item>
+    </string-array>
+
+    <integer-array name="slidemenuimagelist">
+        <item>12</item>
+    </integer-array>
+
+    <string-array name="report_list">
+        <item>垃圾广告 </item>
+        <item>煽情骗顶</item>
+        <item>以前看过</item>
+        <item>色情</item>
+        <item>抄袭</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

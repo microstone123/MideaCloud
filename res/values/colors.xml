@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <color name="color_0">#dedede</color>
     <color name="color_1">#7cc576</color>
     <color name="color_2">#2a4253</color>
     <color name="color_3">#f26d7e</color>
     <color name="color_4">#a286c0</color>
+    <color name="line_img">#C8C8C8</color>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
 </resources>
