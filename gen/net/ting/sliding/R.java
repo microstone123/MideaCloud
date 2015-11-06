@@ -12,8 +12,6 @@ public final class R {
         public static final int birds=0x7f050001;
         public static final int birds_img=0x7f050002;
         public static final int color_names=0x7f050000;
-        public static final int report_list=0x7f050005;
-        public static final int slidemenuimagelist=0x7f050004;
         public static final int slidemenulist=0x7f050003;
     }
     public static final class attr {
@@ -151,8 +149,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int dimen_10=0x7f070007;
         public static final int dimen_15=0x7f070008;
         public static final int dimen_20=0x7f070009;
-        public static final int dimen_65=0x7f07000a;
-        public static final int dimen_70=0x7f07000b;
+        public static final int dimen_30=0x7f07000a;
+        public static final int dimen_40=0x7f07000b;
+        public static final int dimen_45=0x7f07000c;
+        public static final int dimen_65=0x7f07000d;
+        public static final int dimen_70=0x7f07000e;
         public static final int list_padding=0x7f070001;
         public static final int shadow_width=0x7f070002;
         public static final int slide_top=0x7f070003;
@@ -195,23 +196,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int content_frame=0x7f040007;
         public static final int fullscreen=0x7f040003;
+        public static final int image_item=0x7f04000d;
         public static final int left=0x7f040000;
-        public static final int login_ed=0x7f04000e;
-        public static final int login_out=0x7f04000f;
-        public static final int login_setting=0x7f040010;
+        public static final int login_ed=0x7f040013;
+        public static final int login_out=0x7f040014;
+        public static final int login_setting=0x7f040015;
         public static final int margin=0x7f040002;
         public static final int menu_frame=0x7f04000a;
         public static final int none=0x7f040004;
         public static final int right=0x7f040001;
         public static final int selected_view=0x7f040005;
-        public static final int setting_bottom_list=0x7f040011;
+        public static final int set_image=0x7f04000b;
+        public static final int setting_bottom_list=0x7f040016;
+        public static final int setting_bottom_text=0x7f04000c;
         public static final int slide_menu=0x7f040006;
-        public static final int slidingmenumain=0x7f040012;
+        public static final int slide_scroll=0x7f04000e;
+        public static final int slidingmenumain=0x7f040017;
         public static final int title_bar_menu_btn=0x7f040008;
         public static final int title_bar_name=0x7f040009;
-        public static final int user_img=0x7f04000b;
-        public static final int user_login=0x7f04000d;
-        public static final int user_name=0x7f04000c;
+        public static final int uer_layput=0x7f040011;
+        public static final int user_img=0x7f04000f;
+        public static final int user_login=0x7f040012;
+        public static final int user_name=0x7f040010;
     }
     public static final class integer {
         public static final int behind_width=0x7f080001;
@@ -220,11 +226,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int content_frame=0x7f030001;
-        public static final int layout_menu=0x7f030002;
-        public static final int layout_title_bar=0x7f030003;
-        public static final int menu_frame=0x7f030004;
-        public static final int slidemenu=0x7f030005;
-        public static final int slidingmenumain=0x7f030006;
+        public static final int feedback_area=0x7f030002;
+        public static final int goods_recommend=0x7f030003;
+        public static final int ice_control=0x7f030004;
+        public static final int layout_menu=0x7f030005;
+        public static final int layout_title_bar=0x7f030006;
+        public static final int menu_frame=0x7f030007;
+        public static final int message_center=0x7f030008;
+        public static final int setting_bottom_item=0x7f030009;
+        public static final int slidemenu=0x7f03000a;
+        public static final int slidemenu_item=0x7f03000b;
+        public static final int slidingmenumain=0x7f03000c;
     }
     public static final class string {
         public static final int app_name=0x7f090000;

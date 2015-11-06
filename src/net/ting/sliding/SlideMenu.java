@@ -1,60 +1,63 @@
 package net.ting.sliding;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
+import android.app.Activity;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ScrollView;
 
-public class SlideMenu extends ListFragment {
+public class SlideMenu extends BaseFragment {
 
-	@SuppressLint("InflateParams")
+	private SlideMenuAdaper adaper;
+	protected BaseListView setting_bottom_list;
+	protected ScrollView slide_scroll;
+
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.slidemenu, null);
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		layoutResourceId = R.layout.slidemenu;
 	}
 
 	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-		String[] colors = getResources().getStringArray(R.array.color_names);
-		ArrayAdapter<String> colorAdapter = new ArrayAdapter<String>(getActivity(),
-				android.R.layout.simple_list_item_1, android.R.id.text1, colors);
-		setListAdapter(colorAdapter);
+	protected void getData() {
+		slide_scroll.smoothScrollTo(0, 0);
+		setting_bottom_list.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+				switch (arg2) {
+				case 0:
+					switchFragment(new IceControlFragment());
+					break;
+				case 1:
+					switchFragment(new GoodsRecommendFragment());
+					break;
+				case 2:
+					switchFragment(new FeedBackAreaFragment());
+					break;
+				case 3:
+					switchFragment(new MessageCenterFragment());
+					break;
+
+				default:
+					break;
+				}
+			}
+		});
 	}
 
 	@Override
-	public void onListItemClick(ListView lv, View v, int position, long id) {
-		Fragment newContent = null;
-		switch (position) {
-		case 0:
-			newContent = new ColorFragment(R.color.red);
-			break;
-		case 1:
-			newContent = new ColorFragment(R.color.green);
-			break;
-		case 2:
-			newContent = new ColorFragment(R.color.blue);
-			break;
-		case 3:
-			newContent = new ColorFragment(android.R.color.white);
-			break;
-		case 4:
-			newContent = new ColorFragment(android.R.color.black);
-			break;
-		}
-		if (newContent != null)
-			switchFragment(newContent);
+	protected void initView() {
+		setting_bottom_list = (BaseListView) mHoseView.findViewById(R.id.setting_bottom_list);
+		slide_scroll = (ScrollView) mHoseView.findViewById(R.id.slide_scroll);
+		adaper = new SlideMenuAdaper(getActivity());
+		setting_bottom_list.setAdapter(adaper);
 	}
 
 	private void switchFragment(Fragment fragment) {
 		if (getActivity() == null)
 			return;
-
 		if (getActivity() instanceof MainActivity) {
 			MainActivity fca = (MainActivity) getActivity();
 			fca.switchContent(fragment);

@@ -3,7 +3,7 @@
     <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="shadow_width">15dp</dimen>
-    <dimen name="slide_top">55dp</dimen>
+    <dimen name="slide_top">40dp</dimen>
 
     <integer name="num_cols">1</integer>
     <integer name="behind_width">480</integer>
@@ -14,6 +14,9 @@
     <dimen name="dimen_10">10dp</dimen>
     <dimen name="dimen_15">15dp</dimen>
     <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
     <dimen name="dimen_65">65dp</dimen>
     <dimen name="dimen_70">70dp</dimen>
 
