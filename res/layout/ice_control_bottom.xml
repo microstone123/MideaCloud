@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/control_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/cold_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_1"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_20" >
+
+            <CheckBox
+                android:id="@+id/cold_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/control_ic_cold_bg"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:duplicateParentState="false"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cold_cb"
+                android:layout_alignTop="@id/cold_cb"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@id/cold_cb"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/cold_cb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cold_control"
+                    android:textColor="@color/control_ic_cold_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cold_cb_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close_control"
+                    android:textColor="@color/control_ic_cold_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/quick_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_1"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_20" >
+
+            <CheckBox
+                android:id="@+id/quick_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/control_ic_quick_bg"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:duplicateParentState="false"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/quick_cb"
+                android:layout_alignTop="@id/quick_cb"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@id/quick_cb"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/quick_cb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quick_control"
+                    android:textColor="@color/control_ic_quick_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/quick_cb_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close_control"
+                    android:textColor="@color/control_ic_quick_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_01"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/capacity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_1"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_20" >
+
+            <CheckBox
+                android:id="@+id/capacity_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/control_ic_capacity_bg"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:duplicateParentState="false"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/capacity_cb"
+                android:layout_alignTop="@id/capacity_cb"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@id/capacity_cb"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/capacity_cb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/capacity_control"
+                    android:textColor="@color/control_ic_capacity_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/capacity_cb_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close_control"
+                    android:textColor="@color/control_ic_capacity_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/holiday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_1"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_20" >
+
+            <CheckBox
+                android:id="@+id/holiday_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/control_ic_holiday_bg"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:duplicateParentState="false"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/holiday_cb"
+                android:layout_alignTop="@id/holiday_cb"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@id/holiday_cb"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/holiday_cb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/holiday_control"
+                    android:textColor="@color/control_ic_holiday_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/holiday_cb_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close_control"
+                    android:textColor="@color/control_ic_holiday_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

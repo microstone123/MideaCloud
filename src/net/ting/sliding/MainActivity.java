@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -14,6 +13,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 public class MainActivity extends SlidingFragmentActivity {
 
 	private Fragment mContent;
+	public SlidingMenu slidingMenu;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -49,12 +49,14 @@ public class MainActivity extends SlidingFragmentActivity {
 		getSupportFragmentManager().beginTransaction().replace(R.id.menu_frame, new SlideMenu()).commit();
 
 		// 设置滑动菜单的属性值
-		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-		getSlidingMenu().setShadowWidthRes(R.dimen.shadow_width);
-		getSlidingMenu().setShadowDrawable(R.drawable.shadow);
-		getSlidingMenu().setBehindOffsetRes(R.dimen.slidingmenu_offset);
-		getSlidingMenu().setFadeDegree(0.35f);
-		getSlidingMenu().setBehindWidth(getResources().getInteger(R.integer.behind_width));
+		slidingMenu = getSlidingMenu();
+		slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		slidingMenu.setShadowWidthRes(R.dimen.shadow_width);
+		slidingMenu.setShadowDrawable(R.drawable.shadow);
+		slidingMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		slidingMenu.setFadeDegree(0.35f);
+		slidingMenu.setBehindWidth(getResources().getInteger(R.integer.behind_width));
+		slidingMenu.showMenu();
 
 	}
 
@@ -64,20 +66,7 @@ public class MainActivity extends SlidingFragmentActivity {
 	public void switchContent(Fragment fragment) {
 		mContent = fragment;
 		getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
-		getSlidingMenu().showContent();
-	}
-
-	/**
-	 * 菜单按钮点击事件，通过点击ActionBar的Home图标按钮来打开滑动菜单
-	 */
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			toggle();
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		slidingMenu.showContent();
 	}
 
 	/**

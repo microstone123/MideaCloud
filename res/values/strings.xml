@@ -4,4 +4,21 @@
     <string name="app_name">Sliding Demo</string>
     <string name="hello_world">Hello world!</string>
 
+    <!--  -->
+    <string name="seting_str">设置</string>
+    <string name="cold_w">冷度</string>
+    <string name="usercentor_str">个人中心</string>
+    <string name="open_control">已开启</string>
+    <string name="close_control">已关闭</string>
+    <string name="cold_control">速冷</string>
+    <string name="cold_quick">冷冻</string>
+    <string name="quick_control">速冻</string>
+    <string name="capacity_control">人工智能</string>
+    <string name="holiday_control">假日</string>
+    <string name="fruandvegetable_change">变温</string>
+    <string name="heterotherm_str">果蔬</string>
+    <string name="icebig_str">冰镇</string>
+    <string name="freshness_str">保鲜</string>
+    <string name="softfrozen_str">软冷冻</string>
+
 </resources>

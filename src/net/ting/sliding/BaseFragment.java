@@ -8,15 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lidroid.xutils.ViewUtils;
+
 public abstract class BaseFragment extends Fragment {
 	protected Activity mActivity;
 	protected Object tag;
 	protected View mHoseView;
 	protected int layoutResourceId;
-	
+	protected static String titleName = "冰箱控制";
+
 	protected abstract void getData();
 
 	protected abstract void initView();
+
+	protected OnShowMemuListenting onShowMemuListenting;
+
+	public BaseFragment() {
+		super();
+	}
 
 	protected void ReplaceFragmentMethod(int viewId, Fragment fragment) {
 		FragmentTransaction tration = getChildFragmentManager().beginTransaction();
@@ -33,6 +42,7 @@ public abstract class BaseFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		if (mHoseView == null) {
 			mHoseView = inflater.inflate(layoutResourceId, null);
+			ViewUtils.inject(this, mHoseView);
 			initView();
 			getData();
 		}
@@ -45,6 +55,14 @@ public abstract class BaseFragment extends Fragment {
 		return mHoseView;
 	}
 
+	public OnShowMemuListenting getOnShowMemuListenting() {
+		return onShowMemuListenting;
+	}
+
+	public void setOnShowMemuListenting(OnShowMemuListenting onShowMemuListenting) {
+		this.onShowMemuListenting = onShowMemuListenting;
+	}
+
 	public static class SimpleBaseFragment extends BaseFragment {
 
 		@Override
@@ -54,9 +72,12 @@ public abstract class BaseFragment extends Fragment {
 		@Override
 		protected void getData() {
 			// TODO Auto-generated method stub
-			
-		}
 
+		}
+	}
+
+	public interface OnShowMemuListenting {
+		void onShowMenu(boolean isShow);
 	}
 
 }

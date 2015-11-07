@@ -9,14 +9,20 @@
     <integer name="behind_width">480</integer>
 
     <dimen name="dimen_1">1px</dimen>
+    <dimen name="dimen_01">1dp</dimen>
+    <dimen name="dimen_02">2dp</dimen>
     <dimen name="dimen_03">3dp</dimen>
     <dimen name="dimen_05">5dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
     <dimen name="dimen_15">15dp</dimen>
     <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
     <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
     <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_50">65dp</dimen>
+    <dimen name="dimen_55">65dp</dimen>
     <dimen name="dimen_65">65dp</dimen>
     <dimen name="dimen_70">70dp</dimen>
 

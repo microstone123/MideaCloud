@@ -1,14 +1,15 @@
 package net.ting.sliding;
 
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
-
 import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GoodsRecommendFragment extends BaseFragment {
+import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnClick;
+
+public class SettingFragment extends BaseFragment {
+
 	@ViewInject(R.id.title_tv)
 	protected TextView title_tv;
 
@@ -18,13 +19,12 @@ public class GoodsRecommendFragment extends BaseFragment {
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		layoutResourceId = R.layout.goods_recommend;
+		layoutResourceId = R.layout.setting;
 	}
 
 	@Override
 	protected void getData() {
 		title_tv.setText(titleName);
-
 	}
 
 	@OnClick(R.id.bar_image)
@@ -34,7 +34,6 @@ public class GoodsRecommendFragment extends BaseFragment {
 
 	@Override
 	protected void initView() {
-		// TODO Auto-generated method stub
 
 	}
 

@@ -59,14 +59,17 @@
                     android:id="@+id/login_ed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true" >
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
 
                     <LinearLayout
                         android:id="@+id/login_out"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:background="@drawable/setting_menu_bg"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/dimen_20" >
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -78,7 +81,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:paddingLeft="@dimen/dimen_03"
                             android:text="注销"
                             android:textColor="@color/white"
                             android:textSize="14sp"
@@ -88,8 +90,6 @@
                     <View
                         android:layout_width="@dimen/dimen_1"
                         android:layout_height="fill_parent"
-                        android:layout_marginLeft="@dimen/dimen_20"
-                        android:layout_marginRight="@dimen/dimen_20"
                         android:background="@color/white" />
 
                     <LinearLayout
@@ -97,6 +97,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:background="@drawable/setting_menu_bg"
                         android:orientation="horizontal" >
 
                         <ImageView

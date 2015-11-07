@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:background="@color/control_top_bg"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_25"
+    android:paddingTop="@dimen/dimen_25" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/ice_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/ice_cloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ice_num"
+                android:layout_centerHorizontal="true"
+                android:text="@string/cold_w"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ice_num"
+                android:layout_marginLeft="@dimen/dimen_03"
+                android:layout_toRightOf="@id/ice_num"
+                android:background="@drawable/control_ic_c_round_f"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <TextView
+                android:id="@+id/ice_cloud_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="-15"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/icecloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ice_cloud_num"
+                android:layout_centerHorizontal="true"
+                android:text="@string/cold_quick"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ice_cloud_num"
+                android:layout_marginLeft="@dimen/dimen_03"
+                android:layout_toRightOf="@id/ice_cloud_num"
+                android:background="@drawable/control_ic_c_round_f"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fruandvegetable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <CheckBox
+                android:id="@+id/fruandvegetable_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/control_ic_fruandvegetable_heterotherm_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="false" />
+
+            <TextView
+                android:id="@+id/fruandvegetable_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fruandvegetable_image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/fruandvegetable_change"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_02"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_15" >
+
+        <RelativeLayout
+            android:id="@+id/heterotherm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <CheckBox
+                android:id="@+id/heterotherm_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/control_ic_fruits_heterotherm_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="false" />
+
+            <TextView
+                android:id="@+id/heterotherm_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heterotherm_image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/heterotherm_str"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/icebig_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <CheckBox
+                android:id="@+id/icebig_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/control_ic_icebig_icemaking_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="false" />
+
+            <TextView
+                android:id="@+id/icebig_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icebig_image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/icebig_str"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/freshness_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <CheckBox
+                android:id="@+id/freshness_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/control_ic_freshness_heterotherm_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="false" />
+
+            <TextView
+                android:id="@+id/freshness_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/freshness_image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/freshness_str"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/softfrozen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <CheckBox
+                android:id="@+id/softfrozen_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/control_ic_softfrozen_heterotherm_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="false" />
+
+            <TextView
+                android:id="@+id/softfrozen_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/softfrozen_image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/softfrozen_str"
+                android:textColor="@color/control_top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -7,10 +7,17 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ScrollView;
 
+import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnClick;
+
 public class SlideMenu extends BaseFragment {
 
 	private SlideMenuAdaper adaper;
+
+	@ViewInject(R.id.setting_bottom_list)
 	protected BaseListView setting_bottom_list;
+
+	@ViewInject(R.id.slide_scroll)
 	protected ScrollView slide_scroll;
 
 	@Override
@@ -26,6 +33,7 @@ public class SlideMenu extends BaseFragment {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+				BaseFragment.titleName = adaper.getItem(arg2);
 				switch (arg2) {
 				case 0:
 					switchFragment(new IceControlFragment());
@@ -47,10 +55,7 @@ public class SlideMenu extends BaseFragment {
 		});
 	}
 
-	@Override
 	protected void initView() {
-		setting_bottom_list = (BaseListView) mHoseView.findViewById(R.id.setting_bottom_list);
-		slide_scroll = (ScrollView) mHoseView.findViewById(R.id.slide_scroll);
 		adaper = new SlideMenuAdaper(getActivity());
 		setting_bottom_list.setAdapter(adaper);
 	}
@@ -64,4 +69,21 @@ public class SlideMenu extends BaseFragment {
 		}
 	}
 
+	@OnClick(R.id.user_img)
+	public void onUserImg(View v) {
+		BaseFragment.titleName = getActivity().getResources().getString(R.string.usercentor_str);
+		switchFragment(new UserDetailFragment());
+	}
+
+	@OnClick(R.id.login_out)
+	public void onLoginOut(View v) {
+//		BaseFragment.titleName = "设置";
+//		switchFragment(new SettingFragment());
+	}
+
+	@OnClick(R.id.login_setting)
+	public void onLoginSetting(View v) {
+		BaseFragment.titleName = getActivity().getResources().getString(R.string.seting_str);
+		switchFragment(new SettingFragment());
+	}
 }
