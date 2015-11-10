@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmlInfos>
+    <info>
+         <name>智利Royal Down JJJ车厘子原箱2.5Kg 海外直采</name>
+         <placeArea>智利</placeArea>
+         <price>318</price>
+         <imgUrl>R.drawable.d</imgUrl>
+    </info>
+     <info>
+         <name>海外直采 塔斯马尼亚Tiger Fuji虎牌苹果</name>
+         <placeArea>澳大利亚</placeArea>
+         <price>20</price>
+         <imgUrl>R.drawable.i</imgUrl>
+    </info>
+    <info>
+         <name>天谱乐食Tener Plus Good Nature 猪腩肋排500g</name>
+         <placeArea>美国</placeArea>
+         <price>58</price>
+         <imgUrl>R.drawable.a</imgUrl>
+    </info> 
+     <info>
+         <name>天玛生态 参杞乌鸡 750g</name>
+         <placeArea>中国 </placeArea>
+         <price>42.8</price>
+         <imgUrl>R.drawable.b</imgUrl>
+    </info>
+    <info>
+         <name>天玛生态 草原老母鸡 1200g</name>
+         <placeArea>中国</placeArea>
+         <price>42.8</price>
+         <imgUrl>R.drawable.c</imgUrl>
+    </info>
+</xmlInfos>

@@ -6,5 +6,20 @@
         <item>交互专区</item>
         <item>信息中心</item>
     </string-array>
+    <string-array name="animet_list">
+        <item>全部 </item>
+        <item>肉类</item>
+        <item>水果</item>
+        <item>蔬菜</item>
+    </string-array>
+    <string-array name="setting_list">
+        <item>帮助 </item>
+        <item>联系我们</item>
+        <item>版本更新</item>
+        <item>用户使用协议</item>
+        <item>用户反馈</item>
+        <item>推荐给朋友</item>
+        <item>清理缓存</item>
+    </string-array>
 
 </resources>

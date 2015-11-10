@@ -1,14 +1,13 @@
 package net.ting.sliding;
 
+import xutil.library.view.annotation.ViewInject;
+import xutil.library.view.annotation.event.OnClick;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ScrollView;
-
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
 
 public class SlideMenu extends BaseFragment {
 

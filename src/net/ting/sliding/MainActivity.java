@@ -1,19 +1,22 @@
 package net.ting.sliding;
 
+import slidingmenu.lib.SlidingMenu;
+import slidingmenu.lib.app.SlidingFragmentActivity;
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-
-public class MainActivity extends SlidingFragmentActivity {
+public class MainActivity extends SlidingFragmentActivity implements OnConnectChangeListenting {
 
 	private Fragment mContent;
 	public SlidingMenu slidingMenu;
+	protected FrameLayout framelayout;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -28,6 +31,28 @@ public class MainActivity extends SlidingFragmentActivity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		initSlidingMenu(savedInstanceState);
+		ReplaceFragmentMethod(R.id.framelayout_err_connet, new ErrorConnetFragment());
+		ConnectionChangeReceiver.setOnConnectChangeListenting(this);
+
+	}
+
+	/**
+	 * 加载初始进入Fragment的方法
+	 */
+	protected void ReplaceFragmentMethod(int viewId, Fragment fragment) {
+		FragmentTransaction tration = getSupportFragmentManager().beginTransaction();
+		tration.replace(viewId, fragment);
+		tration.commitAllowingStateLoss();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		if (!NetworkUtil.isNetworkAvailable(this)) {
+			OnConnectChange(false);
+		} else {
+			OnConnectChange(true);
+		}
 	}
 
 	/**
@@ -42,6 +67,7 @@ public class MainActivity extends SlidingFragmentActivity {
 
 		// 设置主视图界面
 		setContentView(R.layout.content_frame);
+		framelayout = (FrameLayout) findViewById(R.id.framelayout_err_connet);
 		getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, mContent).commit();
 
 		// 设置滑动菜单视图界面
@@ -76,5 +102,14 @@ public class MainActivity extends SlidingFragmentActivity {
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
+	}
+
+	@Override
+	public void OnConnectChange(boolean isConnect) {
+		if (!isConnect) {
+			framelayout.setVisibility(View.VISIBLE);
+		} else {
+			framelayout.setVisibility(View.GONE);
+		}
 	}
 }

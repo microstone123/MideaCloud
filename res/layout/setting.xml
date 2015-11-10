@@ -6,12 +6,18 @@
         android:id="@+id/top_title"
         layout="@layout/cloud_title" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ListView
+        android:id="@+id/setting_bottom_list"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/top_title"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="setting" />
+        android:background="@color/line_img"
+        android:divider="@color/line_img"
+        android:dividerHeight="0.2dp"
+        android:fadingEdge="none"
+        android:paddingBottom="0.2dp"
+        android:paddingTop="0.2dp"
+        android:scrollingCache="false" >
+    </ListView>
 
 </RelativeLayout>

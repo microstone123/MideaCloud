@@ -9,12 +9,16 @@
     <color name="line_img">#C8C8C8</color>
     <color name="conttol_tx">#909090</color>
     <color name="transparent">#00000000</color>
+    <color name="price_cor">#fa6400</color>
     <color name="red">#900</color>
     <color name="green">#090</color>
     <color name="blue">#009</color>
     <color name="white">#FFF</color>
     <color name="black">#000</color>
+    <color name="category_tab_highlight_bg">#C519B6B6</color>
     <color name="title_bg">#00bbff</color>
+    <color name="activity_bg_color">#eeeeee</color>
+    <color name="add_addr_item">#1E1E1E</color>
 
     <!-- control -->
     <color name="control_top_bg">#4a86e8</color>

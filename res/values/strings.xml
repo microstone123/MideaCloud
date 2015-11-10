@@ -3,6 +3,7 @@
 
     <string name="app_name">Sliding Demo</string>
     <string name="hello_world">Hello world!</string>
+    <string name="error_connet_s">世界上手机在这里！却没有网络。点击设置网络</string>
 
     <!--  -->
     <string name="seting_str">设置</string>

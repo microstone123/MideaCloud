@@ -30,18 +30,32 @@
             android:id="@+id/popop_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dimen_20"
             android:background="@drawable/popup_image" />
+
+        <View
+            android:id="@+id/v_image"
+            android:layout_width="@dimen/dimen_01"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/popop_image"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <net.ting.sliding.BaseSwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/top_title"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="goods" />
+        android:background="@color/activity_bg_color"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_13"
+        android:paddingRight="@dimen/dimen_10" >
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/baseList_style" />
+    </net.ting.sliding.BaseSwipeRefreshLayout>
 
 </RelativeLayout>

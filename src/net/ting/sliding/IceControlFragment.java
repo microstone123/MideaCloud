@@ -1,13 +1,12 @@
 package net.ting.sliding;
 
+import xutil.library.view.annotation.ViewInject;
+import xutil.library.view.annotation.event.OnClick;
 import android.app.Activity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
 
 public class IceControlFragment extends BaseFragment {
 
@@ -155,59 +154,67 @@ public class IceControlFragment extends BaseFragment {
 			capacity_cb_open.setSelected(true);
 		}
 	}
-	
+
 	@OnClick(R.id.quick_layout)
 	public void onQuickLayout(View v) {
 		if (quick_cb.isChecked()) {
 			quick_cb.setChecked(false);
 			quick_cb_name.setSelected(false);
 			quick_cb_open.setSelected(false);
+			quick_cb_open.setText("已关闭");
 		} else {
 			quick_cb.setChecked(true);
 			quick_cb_name.setSelected(true);
 			quick_cb_open.setSelected(true);
+			quick_cb_open.setText("已开启");
 		}
 	}
-	
+
 	@OnClick(R.id.capacity_layout)
 	public void oncapacityLayout(View v) {
 		if (capacity_cb.isChecked()) {
 			capacity_cb.setChecked(false);
 			capacity_cb_name.setSelected(false);
 			capacity_cb_open.setSelected(false);
+			capacity_cb_open.setText("已关闭");
 		} else {
 			capacity_cb.setChecked(true);
 			capacity_cb_name.setSelected(true);
 			capacity_cb_open.setSelected(true);
+			capacity_cb_open.setText("已开启");
 		}
 	}
-	
+
 	@OnClick(R.id.holiday_layout)
 	public void onholidayLayout(View v) {
 		if (holiday_cb.isChecked()) {
 			holiday_cb.setChecked(false);
 			holiday_cb_name.setSelected(false);
 			holiday_cb_open.setSelected(false);
+			holiday_cb_open.setText("已关闭");
 		} else {
 			holiday_cb.setChecked(true);
 			holiday_cb_name.setSelected(true);
 			holiday_cb_open.setSelected(true);
+			holiday_cb_open.setText("已开启");
 		}
 	}
-	
+
 	@OnClick(R.id.cold_layout)
 	public void onColdLayout(View v) {
 		if (cold_cb.isChecked()) {
 			cold_cb.setChecked(false);
 			cold_cb_name.setSelected(false);
 			cold_cb_open.setSelected(false);
+			cold_cb_open.setText("已关闭");
 		} else {
 			cold_cb.setChecked(true);
 			cold_cb_name.setSelected(true);
 			cold_cb_open.setSelected(true);
+			cold_cb_open.setText("已开启");
 		}
 	}
-	
+
 	@OnClick(R.id.softfrozen_layout)
 	public void onSoftfrozen(View v) {
 		if (softfrozen_image.isChecked()) {

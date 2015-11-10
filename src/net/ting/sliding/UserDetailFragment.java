@@ -1,12 +1,11 @@
 package net.ting.sliding;
 
+import xutil.library.view.annotation.ViewInject;
+import xutil.library.view.annotation.event.OnClick;
 import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
 
 public class UserDetailFragment extends BaseFragment {
 
