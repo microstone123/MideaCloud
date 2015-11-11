@@ -2,6 +2,9 @@
 <resources>
 
     <string name="app_name">Sliding Demo</string>
+    <string name="guit">user</string>
+    <string name="login_in">登录</string>
+    <string name="login_out">注销</string>
     <string name="hello_world">Hello world!</string>
     <string name="error_connet_s">世界上手机在这里！却没有网络。点击设置网络</string>
 
@@ -12,6 +15,8 @@
     <string name="open_control">已开启</string>
     <string name="close_control">已关闭</string>
     <string name="cold_control">速冷</string>
+    <string name="fuwu">-15</string>
+    <string name="wu">5</string>
     <string name="cold_quick">冷冻</string>
     <string name="quick_control">速冻</string>
     <string name="capacity_control">人工智能</string>

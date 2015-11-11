@@ -83,7 +83,7 @@ public class BaseSwipeRefreshLayout extends SwipeRefreshLayout implements OnScro
 				mListView = (ListView) childView;
 				// 设置滚动监听器给ListView, 使得滚动的情况下也可以自动加载
 				mListView.setOnScrollListener(this);
-				Log.d(VIEW_LOG_TAG, "### 找到listview");
+//				Log.d(VIEW_LOG_TAG, "### 找到listview");
 			}
 		}
 	}

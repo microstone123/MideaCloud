@@ -20,7 +20,6 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/dimen_20"
         android:layout_toRightOf="@id/set_image"
-        android:text="sddd"
         android:textColor="@color/white"
         android:textSize="15sp" />
 

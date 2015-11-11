@@ -161,12 +161,12 @@ public class IceControlFragment extends BaseFragment {
 			quick_cb.setChecked(false);
 			quick_cb_name.setSelected(false);
 			quick_cb_open.setSelected(false);
-			quick_cb_open.setText("已关闭");
+			quick_cb_open.setText(mActivity.getResources().getString(R.string.close_control));
 		} else {
 			quick_cb.setChecked(true);
 			quick_cb_name.setSelected(true);
 			quick_cb_open.setSelected(true);
-			quick_cb_open.setText("已开启");
+			quick_cb_open.setText(mActivity.getResources().getString(R.string.open_control));
 		}
 	}
 
@@ -176,12 +176,12 @@ public class IceControlFragment extends BaseFragment {
 			capacity_cb.setChecked(false);
 			capacity_cb_name.setSelected(false);
 			capacity_cb_open.setSelected(false);
-			capacity_cb_open.setText("已关闭");
+			capacity_cb_open.setText(mActivity.getResources().getString(R.string.close_control));
 		} else {
 			capacity_cb.setChecked(true);
 			capacity_cb_name.setSelected(true);
 			capacity_cb_open.setSelected(true);
-			capacity_cb_open.setText("已开启");
+			capacity_cb_open.setText(mActivity.getResources().getString(R.string.open_control));
 		}
 	}
 
@@ -191,12 +191,12 @@ public class IceControlFragment extends BaseFragment {
 			holiday_cb.setChecked(false);
 			holiday_cb_name.setSelected(false);
 			holiday_cb_open.setSelected(false);
-			holiday_cb_open.setText("已关闭");
+			holiday_cb_open.setText(mActivity.getResources().getString(R.string.close_control));
 		} else {
 			holiday_cb.setChecked(true);
 			holiday_cb_name.setSelected(true);
 			holiday_cb_open.setSelected(true);
-			holiday_cb_open.setText("已开启");
+			holiday_cb_open.setText(mActivity.getResources().getString(R.string.open_control));
 		}
 	}
 
@@ -206,12 +206,12 @@ public class IceControlFragment extends BaseFragment {
 			cold_cb.setChecked(false);
 			cold_cb_name.setSelected(false);
 			cold_cb_open.setSelected(false);
-			cold_cb_open.setText("已关闭");
+			cold_cb_open.setText(mActivity.getResources().getString(R.string.close_control));
 		} else {
 			cold_cb.setChecked(true);
 			cold_cb_name.setSelected(true);
 			cold_cb_open.setSelected(true);
-			cold_cb_open.setText("已开启");
+			cold_cb_open.setText(mActivity.getResources().getString(R.string.open_control));
 		}
 	}
 

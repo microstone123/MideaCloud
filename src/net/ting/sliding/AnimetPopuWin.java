@@ -16,13 +16,11 @@ public class AnimetPopuWin extends PopupWindow {
 	private AnimentPopuAdapter adapter;
 	private ListView animet_list;
 	private final static int POPU_ITEM_WIDTH = 200;
-	private Context mContext;
 
 	@SuppressWarnings("deprecation")
 	@SuppressLint({ "InflateParams", "NewApi" })
 	public AnimetPopuWin(Context context) {
 		super(context);
-		this.mContext = context;
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mMenuView = inflater.inflate(R.layout.animet_popu, null);
 		animet_list = (ListView) mMenuView.findViewById(R.id.animet_list);

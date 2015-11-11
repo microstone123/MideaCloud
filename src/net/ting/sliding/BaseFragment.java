@@ -20,7 +20,7 @@ public abstract class BaseFragment extends Fragment {
 	protected Object tag;
 	protected View mHoseView;
 	protected int layoutResourceId;
-	protected static String titleName = "冰箱控制";
+	protected static String titleName;
 
 	protected abstract void getData();
 
@@ -72,8 +72,6 @@ public abstract class BaseFragment extends Fragment {
 			initView();
 			getData();
 		}
-		// 缓存的mHoseView需要判断是否已经被加过parent，
-		// 如果有parent需要从parent删除，要不然会发生这个mHoseView已经有parent的错误。
 		ViewGroup parent = (ViewGroup) mHoseView.getParent();
 		if (parent != null) {
 			parent.removeView(mHoseView);
