@@ -1,7 +1,5 @@
 package net.ting.sliding;
 
-import xutil.library.view.annotation.ViewInject;
-import xutil.library.view.annotation.event.OnClick;
 import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,10 +7,8 @@ import android.widget.TextView;
 
 public class FeedBackAreaFragment extends BaseFragment {
 
-	@ViewInject(R.id.title_tv)
 	protected TextView title_tv;
 
-	@ViewInject(R.id.img)
 	protected ImageView img;
 
 	@Override
@@ -27,15 +23,13 @@ public class FeedBackAreaFragment extends BaseFragment {
 		imageLoader.displayImage("drawable://" + R.drawable.pleasewait, img, options);
 	}
 
-	@OnClick(R.id.bar_image)
 	public void onBackMenu(View v) {
 		((MainActivity) getActivity()).showMenu();
 	}
 
 	@Override
 	protected void initView() {
-		// TODO Auto-generated method stub
-
+		title_tv = (TextView)mHoseView.findViewById(R.id.title_tv);
 	}
 
 }

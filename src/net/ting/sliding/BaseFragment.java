@@ -5,7 +5,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
-import xutil.library.ViewUtils;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
@@ -68,7 +67,6 @@ public abstract class BaseFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		if (mHoseView == null) {
 			mHoseView = inflater.inflate(layoutResourceId, null);
-			ViewUtils.inject(this, mHoseView);
 			initView();
 			getData();
 		}

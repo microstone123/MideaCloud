@@ -91,7 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical" >
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="onFruandvegetable" >
 
             <CheckBox
                 android:id="@+id/fruandvegetable_image"
@@ -128,7 +129,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical" >
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="onHeterotherm" >
 
             <CheckBox
                 android:id="@+id/heterotherm_image"
@@ -157,7 +159,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical" >
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="icebig_layout" >
 
             <CheckBox
                 android:id="@+id/icebig_image"
@@ -186,7 +189,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical" >
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="onCapacityLayout" >
 
             <CheckBox
                 android:id="@+id/freshness_image"

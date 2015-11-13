@@ -378,29 +378,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class string {
         public static final int app_name=0x7f0a0000;
-        public static final int capacity_control=0x7f0a000f;
-        public static final int close_control=0x7f0a0009;
-        public static final int cold_control=0x7f0a000a;
-        public static final int cold_quick=0x7f0a000d;
-        public static final int cold_w=0x7f0a0006;
-        public static final int error_connet_s=0x7f0a0004;
-        public static final int freshness_str=0x7f0a0014;
-        public static final int fruandvegetable_change=0x7f0a0011;
-        public static final int fuwu=0x7f0a000b;
-        public static final int hello_world=0x7f0a0003;
-        public static final int heterotherm_str=0x7f0a0012;
-        public static final int holiday_control=0x7f0a0010;
-        public static final int icebig_str=0x7f0a0013;
-        public static final int login_in=0x7f0a0001;
-        public static final int login_out=0x7f0a0002;
-        public static final int open_control=0x7f0a0008;
-        public static final int quick_control=0x7f0a000e;
+        public static final int capacity_control=0x7f0a0010;
+        public static final int close_control=0x7f0a000a;
+        public static final int cold_control=0x7f0a000b;
+        public static final int cold_quick=0x7f0a000e;
+        public static final int cold_w=0x7f0a0007;
+        public static final int error_connet_s=0x7f0a0005;
+        public static final int freshness_str=0x7f0a0015;
+        public static final int fruandvegetable_change=0x7f0a0012;
+        public static final int fuwu=0x7f0a000c;
+        public static final int guit=0x7f0a0001;
+        public static final int hello_world=0x7f0a0004;
+        public static final int heterotherm_str=0x7f0a0013;
+        public static final int holiday_control=0x7f0a0011;
+        public static final int icebig_str=0x7f0a0014;
+        public static final int login_in=0x7f0a0002;
+        public static final int login_out=0x7f0a0003;
+        public static final int open_control=0x7f0a0009;
+        public static final int quick_control=0x7f0a000f;
         /**   
          */
-        public static final int seting_str=0x7f0a0005;
-        public static final int softfrozen_str=0x7f0a0015;
-        public static final int usercentor_str=0x7f0a0007;
-        public static final int wu=0x7f0a000c;
+        public static final int seting_str=0x7f0a0006;
+        public static final int softfrozen_str=0x7f0a0016;
+        public static final int usercentor_str=0x7f0a0008;
+        public static final int wu=0x7f0a000d;
     }
     public static final class style {
         public static final int AnimetPopuWinStyle=0x7f0b0002;

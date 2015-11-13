@@ -93,12 +93,10 @@ public class IceControlFragment extends BaseFragment {
 		title_tv.setText(titleName);
 	}
 
-	@OnClick(R.id.bar_image)
 	public void onBackMenu(View v) {
 		((MainActivity) getActivity()).showMenu();
 	}
 
-	@OnClick(R.id.fruandvegetable_layout)
 	public void onFruandvegetable(View v) {
 		if (fruandvegetable_image.isChecked()) {
 			fruandvegetable_image.setChecked(false);
@@ -109,7 +107,6 @@ public class IceControlFragment extends BaseFragment {
 		}
 	}
 
-	@OnClick(R.id.heterotherm_layout)
 	public void onHeterotherm(View v) {
 		if (heterotherm_image.isChecked()) {
 			heterotherm_image.setChecked(false);
@@ -120,7 +117,6 @@ public class IceControlFragment extends BaseFragment {
 		}
 	}
 
-	@OnClick(R.id.icebig_layout)
 	public void onIcebig(View v) {
 		if (icebig_image.isChecked()) {
 			icebig_image.setChecked(false);
@@ -131,7 +127,6 @@ public class IceControlFragment extends BaseFragment {
 		}
 	}
 
-	@OnClick(R.id.freshness_layout)
 	public void onFreshness(View v) {
 		if (freshness_image.isChecked()) {
 			freshness_image.setChecked(false);
@@ -142,7 +137,6 @@ public class IceControlFragment extends BaseFragment {
 		}
 	}
 
-	@OnClick(R.id.capacity_layout)
 	public void onCapacityLayout(View v) {
 		if (capacity_cb.isChecked()) {
 			capacity_cb.setChecked(false);
@@ -155,7 +149,6 @@ public class IceControlFragment extends BaseFragment {
 		}
 	}
 
-	@OnClick(R.id.quick_layout)
 	public void onQuickLayout(View v) {
 		if (quick_cb.isChecked()) {
 			quick_cb.setChecked(false);
